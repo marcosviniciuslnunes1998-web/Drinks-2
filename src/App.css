@@ -9,7 +9,7 @@ body {
   
 }
 .fundo {
-   background-image: url("logohero.png") ;
+   background: url("/Drinks-2/logohero.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -346,7 +346,7 @@ margin:20px auto;
   background:goldenrod;
 }
 .fundofooter {
-  background: url("anandafooter.png");
+  background: url("/Drinks-2/anandafooter.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
