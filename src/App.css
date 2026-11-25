@@ -1,0 +1,464 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+   font-family: "Montserrat", sans-serif;
+}
+body {
+  background: rgb(3, 3, 3);
+  
+}
+.fundo {
+   background-image: url("logohero.png") ;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    min-height:600px;
+   width:auto;
+   
+    
+
+}
+
+.cabecalho{
+  display: flex;
+  align-items: center;
+  border-bottom:1px solid rgb(49, 46, 46);
+   backdrop-filter: blur(12px);
+   position: fixed;
+   width:100%;
+   z-index: 9999;
+   
+}
+.spanapp{
+  color: goldenrod;
+  border-bottom:1px solid goldenrod;
+}
+
+
+.botaoinicio {
+  margin:0 auto 0;
+}
+.inicio {
+  border:none;
+  color:white;
+  margin-left:50px;
+  background:transparent;
+  font-size:12px;
+  cursor:pointer;
+}
+.logo {
+  background: transparent;
+  margin-left:30px;
+}
+.main-hero { 
+
+width:100%;
+display:flex;
+
+
+}
+.texthero {
+  width:40%;
+  color:rgb(218, 215, 215);
+ margin: 120px 30px;
+ 
+
+
+}
+.botao1 {
+  margin-top:80px;
+  padding:10px;
+  border:1px solid goldenrod;
+  background:black;
+  border-radius:6px;
+  color:goldenrod;
+  transition:0,3;
+  text-align: center;
+  margin-left:30px;
+  font-weight: 600;
+  font-size:14px;
+
+}
+.botao1:hover {
+background: goldenrod;
+transform:scale(1);
+color:white;
+}
+
+
+.aprenda {
+  font-size:35px;
+}
+.paragrafo1{
+  margin-top:20px;
+  font-size:12px;
+}
+
+  
+
+.herofundo{
+  display:flex;
+  width:auto;
+background: rgb(8, 8, 8);
+height:350px;
+}
+.herotext {
+  width:30%;
+  margin-top:20px;
+  
+  margin-left:30px;
+}
+.herotext1 {
+  display:flex;
+  flex-direction: row;
+  width:30%;
+  margin-top:30px;
+  margin-left:60px;
+  gap:60px;
+}
+.card {
+  width:250px;
+  height: 280px;
+  background: black;
+  border-radius: 8px;
+  padding:10px;
+}
+p{
+    color:rgb(231, 224, 224);
+    margin-top: 10px;
+    font-size:12px;
+
+}
+.p1{
+font-size:12px;
+color:goldenrod;
+}
+h4{
+  color:rgb(231, 224, 224);
+  font-size:12px;
+  margin-top:10px;
+}
+.h2-1 {
+  color:rgb(231, 224, 224);
+  margin-top:30px;
+  
+}
+.lermais{
+  margin-top:60px;
+  border:1px solid goldenrod;
+  color:rgb(231, 224, 224);
+  background: black;
+  padding: 4px 8px;
+  font-size:10px;
+  font-weight: 700;
+  border-radius: 4px;
+  
+}
+.modal {
+  width:270px;
+  height:auto;
+  background:transparent;
+  border: 1px solid rgb(231, 224, 224);
+  position:absolute;
+  font-size:12px;
+  z-index: 9999;
+  top:50%;
+  right:0;
+  left:70%;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(10px);
+  transform: scale(1.1);
+  border-radius:10px;
+  padding:10px 10px;
+}
+
+  
+
+.Fecharmodal {
+   margin-top:60px;
+   margin-left:100px;
+  border:1px solid goldenrod;
+  color:rgb(231, 224, 224);
+  background: black;
+  padding: 4px 8px;
+  font-size:10px;
+  font-weight: 700;
+  border-radius: 4px;
+  width:50px;
+}
+.h4-2 {
+  margin-left:50px;
+  font-size:15px;
+}
+.Intro1 {
+  display:flex;
+  margin-top: 20px;
+
+}
+.introfundo{
+  position: relative;
+  background: rgb(3, 3, 3);
+  top:0;
+
+}
+.card1 {
+  margin:0 auto 0 ;
+  
+}
+
+
+.botao2{
+
+  margin-left:15px;
+  border:none;
+  background: black;
+  color:rgb(231, 224, 224);
+  padding:6px;
+  border-radius:6px;
+  font-weight: 600;
+}
+.botao2:hover {
+  background:goldenrod;
+
+
+}
+.p2 {
+  font-size:12px;
+color:goldenrod;
+ margin-left:30px;
+ margin-top:30px;
+}
+.h2-2 {
+  margin-left:30px;
+  color:rgb(231, 224, 224);
+}
+.drinks {
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+
+
+  
+}
+.introcard {
+  display:grid;
+   grid-template-columns: repeat(4, 1fr);
+   justify-content: center;
+   gap:20px;
+  margin:50px 50px;
+
+}
+.introcard1{
+  margin-left:30px;
+  width:180px;
+  height:250px;
+   background: rgb(25, 25, 25);
+   border-radius: 10px;
+   transition:0.3s;
+   text-align: center;
+  
+   
+}
+.introcard1:hover {
+transform:scale(1.05);
+}
+.p-2 {
+  font-size:12px;
+}
+.vermais {
+  margin-top:15px;
+  border:1px solid goldenrod;
+  color:rgb(231, 224, 224);
+  background: black;
+  padding: 4px 8px;
+  font-size:10px;
+  font-weight: 700;
+  border-radius: 4px;
+  cursor:pointer;
+}
+.h4-4{
+  color:white;
+}
+.modalintro {
+  width:240px;
+  min-height:350px;
+ font-size:12px;
+  position:absolute;
+  background:transparent;
+  backdrop-filter: blur(12px);
+  border: 1px solid rgb(231, 224, 224);
+  transform:scale(1.2);
+  z-index: 9999;
+  border-radius: 10px;
+  text-align: center;
+  padding:10px;
+  
+}
+.p-3 {
+  font-size:12px;
+}
+.fecharmodal1 {
+   margin-top: 20px;
+   
+  border:1px solid goldenrod;
+  color:rgb(231, 224, 224);
+  background: black;
+  padding: 4px 8px;
+  font-size:10px;
+  font-weight: 700;
+  border-radius: 4px;
+  width:50px;
+}
+.fecharmodal2 {
+display: block;
+margin:20px auto;
+  border:1px solid goldenrod;
+  color:rgb(231, 224, 224);
+  background: black;
+  padding:5px;
+  font-size:10px;
+  font-weight: 700;
+  border-radius: 4px;
+
+
+
+}
+.todosdrinks {
+   margin-top: 20px;
+   
+  border:1px solid goldenrod;
+  color:rgb(231, 224, 224);
+  background: black;
+  padding: 4px 8px;
+  font-size:10px;
+  font-weight: 700;
+  border-radius: 4px;
+  width:150px;
+  white-space: nowrap;
+}
+.todosdrinks:hover {
+  background:goldenrod;
+}
+.fundofooter {
+  background: url("anandafooter.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    
+    
+    position: absolute;
+    
+    
+    
+}
+.footertext {
+  width:40%;
+  margin:30px 30px;
+  
+}
+.textfooter{
+  color: aliceblue;
+  margin-top:30px;
+  font-size: 25px;
+}
+.p3 {
+   font-size:12px;
+color:goldenrod;
+margin-top:30px;
+ 
+}
+.conversa {
+  
+ margin-top:50px;
+  border:1px solid goldenrod;
+  color:rgb(231, 224, 224);
+  background: black;
+  padding:8px;
+  font-size:13px;
+  font-weight: 700;
+  border-radius: 4px;
+  cursor:pointer;
+
+}
+.conversa:hover {
+  background:goldenrod;
+}
+.finalfooter {
+  display: flex;
+  height:60px;
+  justify-content: center;
+  margin-top:120px;
+  
+}
+.p4 {
+  font-size:10px;
+}
+.modalconversa {
+  width: 400px;
+  height:400px;
+overflow: auto;
+overflow-x: hidden;
+  right:20%;
+  top:0;
+  position:absolute;
+  background: transparent;
+  backdrop-filter: blur(12px);
+  border-radius: 12px;
+  border :1px solid goldenrod;
+  padding:10px;
+}
+.fechar1 {
+  width:15px;
+  height:15px;
+  font-size:8px;
+ position: absolute;
+  right:0;
+  border:1px solid goldenrod;
+  background: black;
+  color:aliceblue;
+  
+}
+.resposta {
+  color:aliceblue;
+  font-size: 14px;
+}
+h5{
+  font-size:15px;
+  color:aliceblue;
+
+}
+.enviar{
+   border:1px solid goldenrod;
+  color:rgb(231, 224, 224);
+  background: black;
+  padding:7px;
+  border-radius: 4px;
+  
+}
+.autor {
+  color:aliceblue;
+}
+.footer {
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+.conversafooter {
+  display:flex;
+  flex-direction:row ;
+  align-items: center;
+}
+textarea{
+  resize:none;
+
+}
+.text1 {
+  margin-bottom:15px;
+}
