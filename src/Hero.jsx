@@ -13,7 +13,7 @@ function Hero() {
             <div className='herotext'><p className='p1'>A Historia</p>
                 <h2 className='h2-1'>A Historia da Mixologia <br/>
                 e dos Drinks</h2>
-                <p>A mixoloxia e uma arte antiga que combina historia,cultura e sabor.Desde as civilizações antigas até os bares modernos,os drinks sempre estiveram presentes em momentos especias.</p>
+                <p>A mixologia e uma arte antiga que combina historia,cultura e sabor.Desde as civilizações antigas até os bares modernos,os drinks sempre estiveram presentes em momentos especias.</p>
                 <button className='lermais' onClick={() =>setmodalAberto(true)}>Ler Mais → </button></div>
 
            

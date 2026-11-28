@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import './App.css'
+import { useEffect} from 'react'
 
 
 
@@ -37,6 +38,19 @@ function Intro () {
          {id:16 ,nome:"Bloodmary",img:"intro16.png",descpeq:"Drink salgado, a base de vodka , suco de tomate...",ing:"Sal , molho inglês , suco de limão,suco de tomate ,vodka ,pimenta e aipo para decorar",desc:"Em uma coquetelira acrescente todos os ingredientes coloque gelo e bata vigorosamente afim de airar o drink , em um copo alto acrescente o gelo e coe o drink ,decore com aipo",categoria:"Classico"},
 
 ];
+const [modalfavoritos,setmodalfavoritos]=useState(false)
+const [favoritos,setfavoritos] =useState(() => { try {
+    return JSON.parse(localStorage.getItem("favoritos")) || [] } catch { return [] } 
+}) 
+useEffect (() => {localStorage.setItem ("favoritos",JSON.stringify(favoritos))},[favoritos])
+function alternarFavorito(id) { setfavoritos (atual => atual.includes(id)
+? atual.filter (f => f !== id)
+: [...atual,id])
+}
+function favoritar(id) {
+  setfavoritos(atual => atual.includes(id) ? atual : [...atual, id])
+  setmodalfavoritos(true)
+}
 const [modalIntro,setmodalIntro]= useState(false)
 const [itemselecionado,setitemselecionado]=useState(null)
 const drinks = drink.find(item =>item.id === itemselecionado)
@@ -44,6 +58,7 @@ const [categoria,setcategoria]=useState("todos")
 const DrinksFiltrados = categoria ==="todos"
 ? drink
 :drink.filter(item => item.categoria === categoria)
+
 
 return (
  
@@ -67,6 +82,7 @@ return (
      {DrinksFiltrados.map(drinks =>(<div className='introcard1'key={drinks.id}><img src={drinks.img} alt="intro1" width={180} height={130}></img>
      <h4>{drinks.nome}</h4>
      <p className='p-2'>{drinks.descpeq}</p>
+     
      <button className='vermais'onClick={() => {setmodalIntro(true);setitemselecionado(drinks.id)}}>Ver mais</button>
      </div>))}
      </div>
@@ -88,9 +104,18 @@ return (
                 <p className='p-3'>{drinks.ing}</p>
                 <h4>Modo de Preparo</h4>
                 <p className='p-3'>{drinks.desc}</p>
+                <button
+  className='favoritos'
+  onClick={() => favoritar(drinks.id)}
+>
+  {favoritos.includes(drinks.id) ? "❤️" : "🤍"} 
+</button>
+            
+                </div>
+                
                 <button className='fecharmodal1' onClick={()=>setmodalIntro(false)}>Fechar</button>
 
-            </div>
+            
         </div>)}
      
  
@@ -109,6 +134,29 @@ return (
 
 
 </div>
+{modalfavoritos && (
+  <div className="modalfavoritos">
+    <button className='Fecharfavoritos' onClick={() => setmodalfavoritos(false)}>X</button>
+
+    <h2>Favoritos</h2>
+
+    {drink.filter(item => favoritos.includes(item.id)).length === 0 ? (
+      <p>Você ainda não adicionou nenhum Drink.</p>
+    ) : (
+      drink
+        .filter(item => favoritos.includes(item.id))
+        .map(item => (
+          <div key={item.id}>
+            <img src={item.img} alt={item.nome} width={60} />
+            <h4>{item.nome}</h4>
+            <p>{item.ing}</p>
+            <button onClick={() => alternarFavorito(item.id)}>Remover</button>
+              
+          </div>
+        ))
+    )}
+  </div>
+)}
 
 
 
